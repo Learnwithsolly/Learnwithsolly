@@ -1,58 +1,60 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-/* General Styles */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-    animation: color-move 4s linear infinite; /* Speed up animation */
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f444f7;
-    color: #333
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
     animation: color-move 4s linear infinite; /* Speed up animation */
-
 }
 
-/* Navigation */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Navigation Styles */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    background: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
     top: 0;
-    z-index: 1000;
-    animation: color-move 4s linear infinite; /* Speed up animation */
+    z-index: 100;
 }
 
-.logo h2 {
-    color: #f39c12;
-    font-size: 24px;
-    font-weight: 700;
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-left: 2rem;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline-block;
+    margin: 0 1.5rem;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -61,123 +63,247 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    color: #fff;
     text-align: center;
-    overflow: hidden;
+    padding: 5rem 1rem;
 }
 
-.hero-video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    color: white;
-    padding: 20px;
-}
-
-.hero-content h1 {
-    font-size: 50px;
-    font-weight: 700;
-}
-
-.hero-content p {
-    font-size: 20px;
-    margin: 10px 0;
-}
-
-.btn {
-    background: #f39c12;
-    padding: 15px 30px;
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 15px;
-}
-
-.btn:hover {
-    background: #e67e22;
+.hero .btn {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
     animation: color-move 4s linear infinite; /* Speed up animation */
 }
 
-/* Sections */
+.hero .btn:hover {
+    background-color: #e67e22;
+}
+
+/* Section Styles */
 section {
-    padding: 80px 10%;
-    text-align: center;
-    background: white;
-    margin: 20px auto;
-    width: 90%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    animation: color-move 4s linear infinite; /* Speed up animation */
+    padding: 3rem 1rem;
+    margin: 2rem 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);animation: color-move 4s linear infinite; /* Speed up animation */
+    
 }
 
 section h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
     color: #333;
 }
 
 section p {
-    font-size: 18px;
-    color: #555;
-}
-
-/* Footer */
-footer {
-    background: #222;
-    color: white;
+    font-size: 1.1rem;
     text-align: center;
-    padding: 15px;
+    color: #666;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
+/* About Section */
+#about {
+    background-color: #ecf0f1;
+}
 
+#about p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Services Section */
+#services {
+    background-color: #f9f9f9;
+}
+
+#services .service {
+    display: inline-block;
+    width: 30%;
+    background-color: #3498db;
+    color: #fff;
+    padding: 2rem;
+    margin: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#services .service:hover {
+    transform: translateY(-5px);
+}
+
+#services .service:nth-child(1) {
+    background-color: #1abc9c;
+}
+
+#services .service:nth-child(2) {
+    background-color: #e74c3c;
+}
+
+#services .service:nth-child(3) {
+    background-color: #f39c12;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #f2f2f2;
+}
+
+/* Experience Section */
+#experience {
+    background-color: #ecf0f1;
+}
+
+#experience p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Results Section */
+#results {
+    background-color: #f9f9f9;
+}
+
+#results p {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* Process Section */
+#process {
+    background-color: #ecf0f1;
+}
+
+#process p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Portfolio Section */
+#projects {
+    background-color: #f9f9f9;
+}
+
+/* Pricing Section */
+#pricing {
+    background-color: #ecf0f1;
+}
+
+#pricing p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* FAQ Section */
+#faq {
+    background-color: #f9f9f9;
+}
+
+#faq p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Testimonials Section */
+#testimonials {
+    background-color: #ecf0f1;
+}
+
+#testimonials p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Blog Section */
+#blog {
+    background-color: #f9f9f9;
+}
+
+#blog p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Resources Section */
+#resources {
+    background-color: #ecf0f1;
+}
+
+#resources p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f9f9f9;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
     nav ul {
         flex-direction: column;
-        gap: 10px;
-        padding: 10px;
     }
 
-    .hero-content h1 {
-        font-size: 36px;
+    nav ul li {
+        margin: 0.5rem 0;
     }
 
-    .hero-content p {
-        font-size: 16px;
+    .hero h1 {
+        font-size: 2.5rem;
     }
 
-    .btn {
-        font-size: 16px;
-        padding: 12px 25px;
+    .hero p {
+        font-size: 1.1rem;
     }
 
-    section {
-        width: 95%;
-        padding: 50px 5%;
+    .hero .btn {
+        font-size: 1rem;
+    }
+
+    #services .service {
+        width: 80%;
+        margin: 1rem auto;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section p {
+        font-size: 1rem;
     }
 }
