@@ -7,12 +7,15 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    animation: color-move 4s linear infinite; /* Speed up animation */
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f444f7;
+    color: #333
+    animation: color-move 4s linear infinite; /* Speed up animation */
+
 }
 
 /* Navigation */
@@ -26,6 +29,7 @@ nav {
     width: 100%;
     top: 0;
     z-index: 1000;
+    animation: color-move 4s linear infinite; /* Speed up animation */
 }
 
 .logo h2 {
@@ -112,6 +116,7 @@ nav ul li a:hover {
 
 .btn:hover {
     background: #e67e22;
+    animation: color-move 4s linear infinite; /* Speed up animation */
 }
 
 /* Sections */
@@ -123,6 +128,7 @@ section {
     width: 90%;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    animation: color-move 4s linear infinite; /* Speed up animation */
 }
 
 section h2 {
