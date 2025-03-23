@@ -26,43 +26,32 @@ ul {
 nav {
   display: flex;
   justify-content: space-between;
-  background-color: #333;
   align-items: center;
   padding: 20px 30px;
   background: rgba(0, 0, 0, 0.8);
   position: fixed;
-  width: 100%;
+  width: 0%;
   top: 0;
-  z-index: 1000;
+  z-index: 0;
 }
-
-nav .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    padding-left: 2rem;
-    color: #fff;
-    text-transform: uppercase;
+nav .logo img {
+  height: 50px;
 }
-
 nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  list-style: none;
+  display: flex;
 }
-
 nav ul li {
-    margin: 0 1.5rem;
+  margin-left: 20px;
 }
-
 nav ul li a {
-    color: #fff;
-    font-size: 1.1rem;
-    padding: 0.5rem;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s;
 }
-
 nav ul li a:hover {
-    color: #f39c12;
+  color: #ffcc00;
 }
 
 /* Hero Section */
