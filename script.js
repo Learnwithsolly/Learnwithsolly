@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize Firebase (using compat libraries)
+  // =============================
+  // Firebase Init
+  // =============================
   const firebaseConfig = {
     apiKey: "AIzaSyAvgEkGU9xizy_XFg-aGD7NnkvtDBdGBtA",
     authDomain: "freelankarx-portfolio.firebaseapp.com",
@@ -13,8 +15,21 @@ document.addEventListener('DOMContentLoaded', function() {
   const db = firebase.firestore();
   const storage = firebase.storage();
 
-  // Intersection Observer for Section Reveal
-  const sections = document.querySelectorAll('.section');
+  // =============================
+  // Mobile Nav Toggle
+  // =============================
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('nav ul');
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  }
+
+  // =============================
+  // Section Reveal (fix selector)
+  // =============================
+  const sections = document.querySelectorAll('section'); // use all <section> tags
   const observerOptions = { threshold: 0.1 };
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -24,29 +39,30 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }, observerOptions);
-  sections.forEach(section => {
-    revealObserver.observe(section);
-  });
+  sections.forEach(section => revealObserver.observe(section));
 
-  // GSAP Animations for Hero Section
+  // =============================
+  // GSAP Animations
+  // =============================
   gsap.from('.hero-content h1', { opacity: 0, y: -50, duration: 1.5, ease: 'power2.out' });
   gsap.from('.hero-content p', { opacity: 0, y: 50, duration: 1.5, delay: 0.3, ease: 'power2.out' });
   gsap.from('.btn', { opacity: 0, scale: 0.8, duration: 1.5, delay: 0.6, ease: 'back.out(1.7)' });
 
-  // Social Icons Hover Effects using GSAP
+  // =============================
+  // Social Icon Hover
+  // =============================
   const socialLinks = document.querySelectorAll('.social-icons a');
   socialLinks.forEach(link => {
-    link.addEventListener('mouseenter', () => {
-      gsap.to(link, { scale: 1.2, duration: 0.3 });
-    });
-    link.addEventListener('mouseleave', () => {
-      gsap.to(link, { scale: 1, duration: 0.3 });
-    });
+    link.addEventListener('mouseenter', () => gsap.to(link, { scale: 1.2, duration: 0.3 }));
+    link.addEventListener('mouseleave', () => gsap.to(link, { scale: 1, duration: 0.3 }));
   });
 
-  // Review Form Handling
+  // =============================
+  // Reviews Form
+  // =============================
   const reviewForm = document.getElementById('reviewForm');
   const reviewsContainer = document.getElementById('reviewsContainer');
+
   if (reviewForm) {
     reviewForm.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -60,22 +76,22 @@ document.addEventListener('DOMContentLoaded', function() {
         videoURL = await uploadVideoToCloudinary(videoFile);
       }
 
-      // Save review to Firestore
       await db.collection('reviews').add({
-        name: name,
+        name,
         review: reviewText,
-        rating: rating,
-        videoURL: videoURL,
+        rating,
+        videoURL,
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
       });
-      
+
       reviewForm.reset();
       loadReviews();
     });
   }
 
-  // Load and Display Reviews from Firestore
+  // Load and Display Reviews
   function loadReviews() {
+    if (!reviewsContainer) return;
     reviewsContainer.innerHTML = "";
     db.collection('reviews').orderBy('timestamp', 'desc').get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
@@ -91,23 +107,23 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         reviewsContainer.appendChild(reviewDiv);
       });
-      // Attach delete functionality (for admin/demo purposes)
+      // Delete functionality
       document.querySelectorAll('.delete-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           const id = btn.getAttribute('data-id');
-          db.collection('reviews').doc(id).delete().then(() => {
-            loadReviews();
-          });
+          db.collection('reviews').doc(id).delete().then(loadReviews);
         });
       });
     });
   }
   loadReviews();
 
-  // Cloudinary Video Upload Function
+  // =============================
+  // Cloudinary Upload
+  // =============================
   async function uploadVideoToCloudinary(file) {
     const cloudName = "dflqyatre";
-    const unsignedPreset = "freelankarx portfolio";
+    const unsignedPreset = "freelankarx_portfolio"; // ⚠️ safer without space
     const url = `https://api.cloudinary.com/v1_1/${cloudName}/video/upload`;
     const formData = new FormData();
     formData.append("file", file);
@@ -123,29 +139,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Klaviyo Pop-Up Handling (if used)
+  // =============================
+  // Klaviyo Popup
+  // =============================
   const popup = document.getElementById('klaviyoPopup');
   if (popup) {
-    const closeBtn = document.querySelector('.klaviyo-popup .popup-close');
+    const closeBtn = popup.querySelector('.popup-close');
     const klaviyoForm = document.getElementById('klaviyoForm');
-    setTimeout(() => {
-      popup.style.display = 'block';
-    }, 7000);
-    closeBtn.addEventListener('click', () => {
-      popup.style.display = 'none';
-    });
+
+    setTimeout(() => popup.style.display = 'block', 7000);
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => popup.style.display = 'none');
+    }
     window.addEventListener('click', (e) => {
-      if (e.target === popup) {
-        popup.style.display = 'none';
-      }
+      if (e.target === popup) popup.style.display = 'none';
     });
-    klaviyoForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = klaviyoForm.email.value;
-      klaviyoForm.innerHTML = '<p class="thank-you">Thank you for subscribing! Check your inbox for a welcome message.</p>';
-      setTimeout(() => {
-        popup.style.display = 'none';
-      }, 3000);
-    });
+
+    if (klaviyoForm) {
+      klaviyoForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = klaviyoForm.email.value;
+        klaviyoForm.innerHTML = '<p class="thank-you">Thank you for subscribing! Check your inbox for a welcome message.</p>';
+        setTimeout(() => popup.style.display = 'none', 3000);
+      });
+    }
   }
 });
