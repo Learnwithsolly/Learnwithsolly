@@ -1,248 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LearnWithSolly | Adeagbo Adesola - Shopify & Digital Marketing Expert</title>
-  <meta name="description" content="LearnWithSolly by Adeagbo Adesola helps brands scale with Shopify, TikTok Ads, Facebook Ads, and Email Marketing. Build, grow, and succeed online with proven strategies.">
+  <!-- Core SEO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LearnWithSolly | Shopify Expert & Digital Marketing Strategist</title>
+  <meta name="description" content="LearnWithSolly helps you build, scale, and optimize Shopify stores with expert strategies in eCommerce, TikTok ads, and email marketing." />
+  <meta name="keywords" content="LearnWithSolly, Shopify, eCommerce, TikTok ads, email marketing, dropshipping, online business" />
+  <link rel="canonical" href="https://learnwithsolly.com" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css">
+  <!-- Social Cards -->
+  <meta property="og:title" content="LearnWithSolly | Shopify Expert & Digital Marketing Strategist">
+  <meta property="og:description" content="We build and grow profitable eCommerce businesses through Shopify, TikTok ads, and automation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://learnwithsolly.com">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600&auto=format&fit=crop">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LearnWithSolly | Shopify Expert & Digital Marketing Strategist">
+  <meta name="twitter:description" content="Helping you launch, scale, and automate Shopify stores.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600&auto=format&fit=crop">
 
-  <!-- Font Awesome (icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Fonts + Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Script -->
-  <script defer src="script.js"></script>
+  <style>
+    :root{ --blue:#0077ff; --teal:#00c4a7; --dark:#0a0a0a; --light:#f9f9fb }
+    body{ font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--light); color:#1f2937 }
+    h1,h2,h3{ font-family:"Playfair Display", serif }
+    .reveal{ opacity:0; transform:translateY(18px); transition:opacity .9s ease, transform .9s ease }
+    .reveal.show{ opacity:1; transform:none }
+    .hero-tint{ background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.45)) }
+    .btn-main{ background-image:linear-gradient(135deg,var(--blue),var(--teal)); color:white; border-radius:9999px; padding:.85rem 1.25rem; font-weight:600; transition:transform .2s, filter .2s }
+    .btn-main:hover{ transform:translateY(-2px) scale(1.02); filter:brightness(1.05); box-shadow:0 12px 22px rgba(0,119,255,.25) }
+    .img-soft{ border-radius:1rem; box-shadow:0 12px 28px rgba(17,24,39,.15) }
+    .rule{ height:1px; background:linear-gradient(90deg, transparent, var(--blue), transparent) }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <nav>
-      <div class="logo">LearnWithSolly</div>
-      <div class="menu-toggle">&#9776;</div>
-      <ul>
-        <li><a href="#about" class="active">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="/toolkit.html">Get Free Toolkit</a></li>
-        <li><a href="#recent-results">Recent Results</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="/blog/">Blogs</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <video autoplay loop muted playsinline preload="auto" class="hero-video"
-        poster="https://raw.githubusercontent.com/Freelankarx/Freelankarx/main/preview.jpg">
-        <source src="https://raw.githubusercontent.com/Freelankarx/Freelankarx/7b808773e9f3aad67c21e7bb5084ce8267d5a7d5/1000067383-vmake.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="overlay"></div>
-      <div class="hero-content">
-        <h1>Building Digital Success</h1>
-        <p>Helping businesses grow with Shopify, eCommerce, and digital marketing strategies that deliver real results.</p>
-        <a href="#contact" class="btn">Book a Free Consultation</a>
-      </div>
-    </section>
+  <!-- NAV -->
+  <header class="fixed top-0 inset-x-0 z-40 backdrop-blur bg-white/80 border-b border-black/5">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-2">
+        <span class="inline-block w-8 h-8 rounded-full bg-[var(--blue)]"></span>
+        <span class="font-semibold tracking-wide">LearnWithSolly</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#process">Our Process</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="https://wa.me/2348147545019" target="_blank" class="btn-main text-sm">Get Started</a>
+    </div>
   </header>
 
-  <main>
-    <!-- About Section -->
-    <section id="about" class="section">
-      <h2>About LearnWithSolly</h2>
-      <div class="about-content">
-        <div class="text">
-          <p>I’m Adeagbo Adesola, a Shopify expert and digital marketer committed to helping brands scale with clarity and confidence. From store setup to ad campaigns and email automation, I turn your ideas into profitable online businesses.</p>
+  <!-- HERO -->
+  <section id="home" class="relative min-h-[90vh] grid place-items-center text-center">
+    <img src="https://images.unsplash.com/photo-1556741533-f6acd647d2fb?w=1600&auto=format&fit=crop" alt="eCommerce success" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 hero-tint"></div>
+    <div class="relative z-10 max-w-3xl px-6 text-white">
+      <h1 class="text-4xl md:text-6xl font-semibold">Your Shopify Growth Partner</h1>
+      <p class="mt-5 text-base md:text-lg text-white/90">LearnWithSolly builds and scales online stores with expert Shopify development, TikTok ads, and digital marketing automation.</p>
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="#services" class="btn-main">See Services</a>
+        <a href="#portfolio" class="rounded-full px-6 py-3 border border-white/40 hover:bg-white/10">View Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-7xl mx-auto px-6 py-20">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=900&auto=format&fit=crop" alt="About LearnWithSolly" class="img-soft">
+      <div>
+        <h2 class="text-3xl md:text-4xl text-gray-900">Who We Are</h2>
+        <div class="rule my-5"></div>
+        <p class="text-gray-700">At LearnWithSolly, we combine creativity, strategy, and technology to help brands grow. From Shopify design to ad campaigns and email marketing, we’ve helped entrepreneurs turn ideas into million-dollar stores.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl">Our Services</h2>
+      <div class="rule my-5 mx-auto w-40"></div>
+      <div class="grid md:grid-cols-3 gap-8 mt-10">
+        <div class="bg-[var(--blue)]/10 rounded-2xl p-6">
+          <h3 class="text-xl font-semibold">Shopify Store Setup</h3>
+          <p class="mt-2 text-gray-700">Custom design, optimized product pages, and seamless integrations for your store.</p>
+        </div>
+        <div class="bg-[var(--teal)]/10 rounded-2xl p-6">
+          <h3 class="text-xl font-semibold">TikTok & Paid Ads</h3>
+          <p class="mt-2 text-gray-700">High-converting ad campaigns that bring targeted traffic and sales.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-6">
+          <h3 class="text-xl font-semibold">Email Automation</h3>
+          <p class="mt-2 text-gray-700">Flows and campaigns that nurture leads and boost retention with Klaviyo.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Services -->
-    <section id="services" class="section">
-      <h2>My Services</h2>
-      <div class="services-grid">
-        <div class="service">
-          <i class="fas fa-store"></i>
-          <h3>Shopify Store Setup</h3>
-          <p>Custom, high-converting Shopify stores designed for your niche.</p>
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-3xl md:text-4xl text-center">Portfolio</h2>
+    <div class="rule my-5 mx-auto w-40"></div>
+    <div class="grid md:grid-cols-3 gap-6 mt-10">
+      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600" class="img-soft">
+      <img src="https://images.unsplash.com/photo-1581091012184-5c59b8b47e07?w=600" class="img-soft">
+      <img src="https://images.unsplash.com/photo-1556742040-3c52d6e88c62?w=600" class="img-soft">
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="bg-[var(--blue)]/5 py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl">How We Work</h2>
+      <div class="rule my-5 mx-auto w-40"></div>
+      <div class="grid md:grid-cols-4 gap-6 mt-10 text-left">
+        <div class="bg-white rounded-xl shadow p-6"><h3 class="font-semibold">1. Discovery</h3><p class="mt-2 text-gray-600">We understand your goals, target market, and challenges.</p></div>
+        <div class="bg-white rounded-xl shadow p-6"><h3 class="font-semibold">2. Strategy</h3><p class="mt-2 text-gray-600">We craft a growth roadmap with clear deliverables.</p></div>
+        <div class="bg-white rounded-xl shadow p-6"><h3 class="font-semibold">3. Execution</h3><p class="mt-2 text-gray-600">Our team builds, launches, and manages campaigns.</p></div>
+        <div class="bg-white rounded-xl shadow p-6"><h3 class="font-semibold">4. Optimization</h3><p class="mt-2 text-gray-600">We analyze performance and refine for maximum ROI.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-3xl md:text-4xl text-center">Client Testimonials</h2>
+    <div class="rule my-5 mx-auto w-40"></div>
+    <div class="grid md:grid-cols-2 gap-6 mt-10">
+      <div class="bg-white rounded-2xl p-6 shadow"><p class="italic">“LearnWithSolly transformed my store into a conversion machine. Sales tripled in 3 months.”</p><p class="mt-4 font-semibold">— Michael A.</p></div>
+      <div class="bg-white rounded-2xl p-6 shadow"><p class="italic">“Their TikTok ad strategy was a game changer. I finally get consistent ROI.”</p><p class="mt-4 font-semibold">— Sarah O.</p></div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl">Pricing Packages</h2>
+      <div class="rule my-5 mx-auto w-40"></div>
+      <div class="grid md:grid-cols-3 gap-6 mt-10">
+        <div class="bg-[var(--blue)]/10 rounded-2xl p-6">
+          <h3 class="text-xl font-semibold">Starter</h3>
+          <p class="mt-2 text-gray-700">Perfect for beginners launching their first store.</p>
+          <p class="mt-4 font-bold text-xl">$300–$600</p>
         </div>
-        <div class="service">
-          <i class="fas fa-bullhorn"></i>
-          <h3>TikTok & Facebook Ads</h3>
-          <p>Data-driven ad campaigns to generate consistent sales.</p>
+        <div class="bg-[var(--teal)]/10 rounded-2xl p-6">
+          <h3 class="text-xl font-semibold">Growth</h3>
+          <p class="mt-2 text-gray-700">For scaling stores with ad campaigns & automation.</p>
+          <p class="mt-4 font-bold text-xl">$800–$1500</p>
         </div>
-        <div class="service">
-          <i class="fas fa-envelope"></i>
-          <h3>Email Marketing</h3>
-          <p>Automated flows & campaigns that maximize retention and revenue.</p>
+        <div class="bg-white rounded-2xl p-6 shadow">
+          <h3 class="text-xl font-semibold">Enterprise</h3>
+          <p class="mt-2 text-gray-700">Full management, from design to growth strategy.</p>
+          <p class="mt-4 font-bold text-xl">Custom Quote</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- What Sets Me Apart -->
-    <section id="what-sets-me-apart" class="section">
-      <h2>What Sets Me Apart</h2>
-      <p>Choosing the right expert can be tough. My approach is built on innovation, data, and results. I provide tailored strategies designed to deliver measurable growth and long-term success. Partner with me, and you gain a strategist committed to transforming your brand.</p>
-    </section>
-
-    <!-- Recent Results -->
-    <section id="recent-results" class="section">
-      <h2>Explore Recent Results for Clients</h2>
-      <div class="results-content">
-        <div class="results-text">
-          <p>Helped clients increase average order value by <strong>35%</strong> and achieve scalable growth.</p>
-        </div>
-        <div class="results-image-grid">
-          <div class="results-image">
-            <img src="https://raw.githubusercontent.com/Freelankarx/Freelankarx/a2590660717835bde6386362eb94d2884a98d332/result.png" alt="Client result 1">
-          </div>
-          <div class="results-image">
-            <img src="https://raw.githubusercontent.com/Freelankarx/Freelankarx/8ba172b6dfb5095dc1fb80fcc60d3749405e12c7/result%20made%20by%20freelankarx..png" alt="Client result 2">
-          </div>
-          <div class="results-image">
-            <img src="https://raw.githubusercontent.com/Freelankarx/Freelankarx/8ba172b6dfb5095dc1fb80fcc60d3749405e12c7/result%20made%20by%20freelankarx.png" alt="Client result 3">
-          </div>
-        </div>
+  <!-- FAQ -->
+  <section id="faq" class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-3xl md:text-4xl text-center">Frequently Asked Questions</h2>
+    <div class="rule my-5 mx-auto w-40"></div>
+    <div class="space-y-6 mt-10 max-w-3xl mx-auto">
+      <div>
+        <h3 class="font-semibold">How long does it take to build a Shopify store?</h3>
+        <p class="text-gray-600">Most projects take 1–3 weeks depending on complexity.</p>
       </div>
-    </section>
-
-    <!-- Process -->
-    <section id="process" class="section">
-      <h2>How I Work</h2>
-      <div class="process-steps">
-        <div class="step"><i class="fas fa-comments"></i><h3>Consultation</h3><p>We start with a deep dive into your goals and challenges.</p></div>
-        <div class="step"><i class="fas fa-lightbulb"></i><h3>Strategy</h3><p>I create a custom growth strategy for your business.</p></div>
-        <div class="step"><i class="fas fa-cogs"></i><h3>Execution</h3><p>I implement the plan with precision and creativity.</p></div>
-        <div class="step"><i class="fas fa-chart-line"></i><h3>Results</h3><p>I track outcomes, optimize, and scale what works.</p></div>
+      <div>
+        <h3 class="font-semibold">Do you guarantee results?</h3>
+        <p class="text-gray-600">We guarantee expert execution. Business success depends on product-market fit, pricing, and effort.</p>
       </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section id="portfolio" class="section">
-      <h2>My Work</h2>
-      <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <img src="https://raw.githubusercontent.com/Freelankarx/Freelankarx/290c088d23ff23a78f67db0366b9c0de38206d86/project%201%20image" alt="Portfolio Project 1" loading="lazy">
-        </div>
-        <div class="portfolio-item">
-          <img src="https://raw.githubusercontent.com/Freelankarx/Freelankarx/290c088d23ff23a78f67db0366b9c0de38206d86/project%202%20image" alt="Portfolio Project 2" loading="lazy">
-        </div>
-        <div class="portfolio-item">
-          <img src="https://raw.githubusercontent.com/Freelankarx/Freelankarx/290c088d23ff23a78f67db0366b9c0de38206d86/project%203%20image" alt="Portfolio Project 3" loading="lazy">
-        </div>
+      <div>
+        <h3 class="font-semibold">Can you manage my ads monthly?</h3>
+        <p class="text-gray-600">Yes, we offer monthly TikTok ad management and reporting services.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Pricing -->
-    <section id="pricing" class="section">
-      <h2>Pricing Plans</h2>
-      <div class="pricing-grid">
-        <div class="pricing-plan">
-          <h3>Starter Path</h3>
-          <p>$300 - $600</p>
-          <ul>
-            <li>Essential setup with core tools</li>
-            <li>Organic marketing (TikTok & SEO)</li>
-            <li>Best for beginners</li>
-          </ul>
-          <a href="#contact" class="btn">Start with Confidence</a>
-        </div>
-        <div class="pricing-plan">
-          <h3>Builder Path</h3>
-          <p>$700 - $1200</p>
-          <ul>
-            <li>Custom branding + optimized design</li>
-            <li>Product research & marketing tools</li>
-            <li>Ideal for entrepreneurs scaling up</li>
-          </ul>
-          <a href="#contact" class="btn">Build Your Store</a>
-        </div>
-        <div class="pricing-plan">
-          <h3>Boss Path</h3>
-          <p>$2000 - $3900</p>
-          <ul>
-            <li>All-in-one: strategy, ads, automation</li>
-            <li>Hands-free scaling with expert support</li>
-            <li>Built for serious eCom domination</li>
-          </ul>
-          <a href="#contact" class="btn">Go Boss Mode</a>
-        </div>
+  <!-- CONTACT -->
+  <section id="contact" class="max-w-7xl mx-auto px-6 py-20">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl">Let’s Work Together</h2>
+        <div class="rule my-5"></div>
+        <p class="text-gray-700">Ready to build or scale your Shopify business? Reach out to LearnWithSolly today.</p>
+        <a href="https://wa.me/2348147545019" target="_blank" class="btn-main mt-6 inline-block">Chat on WhatsApp</a>
       </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="section">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-item"><h3>How long does it take to set up a Shopify store?</h3><p>On average, 2–4 weeks depending on your needs.</p></div>
-      <div class="faq-item"><h3>What makes your service unique?</h3><p>7+ years of experience and a track record of driving measurable results.</p></div>
-      <div class="faq-item"><h3>How do you ensure conversions?</h3><p>By using data-driven strategies and continuous optimization.</p></div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="section">
-      <h2>Testimonials</h2>
-      <div id="reviewsContainer"></div>
-      <div class="testimonial-input">
-        <h3>Leave Your Review</h3>
-        <form id="reviewForm">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <textarea name="review" placeholder="Your Review" required></textarea>
-          <label for="rating">Your Rating:</label>
-          <div class="rating">
-            <input type="radio" id="star5" name="rating" value="5" required><label for="star5">&#9733;</label>
-            <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
-            <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
-            <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
-            <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
-          </div>
-          <label for="video">Optional: Upload a Video Review</label>
-          <input type="file" id="video" name="video" accept="video/*">
-          <button type="submit" class="btn">Submit Review</button>
+      <div class="bg-white rounded-2xl p-6 shadow">
+        <form action="https://formspree.io/f/your-id" method="POST">
+          <label class="block mb-2 text-sm font-medium">Name</label>
+          <input name="name" required class="w-full rounded-lg border border-black/10 px-4 py-3 mb-4">
+          <label class="block mb-2 text-sm font-medium">Email</label>
+          <input name="email" type="email" class="w-full rounded-lg border border-black/10 px-4 py-3 mb-4">
+          <label class="block mb-2 text-sm font-medium">Message</label>
+          <textarea name="message" rows="4" class="w-full rounded-lg border border-black/10 px-4 py-3 mb-4"></textarea>
+          <button class="btn-main w-full" type="submit">Send Message</button>
         </form>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <h2>Contact Me</h2>
-      <p>Ready to grow your business? Reach out via email or connect with me on social media.</p>
-      <a href="mailto:freelankarx@outlook.com" class="btn">Email Me</a>
-      <div class="social-icons">
-        <a href="https://wa.me/message/GFBML6FCFK35K1" target="_blank"><img src="https://raw.githubusercontent.com/Freelankarx/Freelankarx/7bbdf810cf8c115173744faeb1d7a6a8d3aadc71/whatsapp%20icom.png" alt="WhatsApp"></a>
-        <a href="https://www.tiktok.com/@freelankarx?_t=ZM-8tqrgG6YWPe&_r=1" target="_blank"><img src="https://raw.githubusercontent.com/Freelankarx/Freelankarx/7bbdf810cf8c115173744faeb1d7a6a8d3aadc71/tiktok.png" alt="TikTok"></a>
-        <a href="https://kwork.com/user/freelankarx" target="_blank"><img src="https://raw.githubusercontent.com/Freelankarx/Freelankarx/7bbdf810cf8c115173744faeb1d7a6a8d3aadc71/kwork.png" alt="Kwork"></a>
-        <a href="http://fiverr.com/lekieboyolamile/" target="_blank"><img src="https://raw.githubusercontent.com/Freelankarx/Freelankarx/7bbdf810cf8c115173744faeb1d7a6a8d3aadc71/Fiverr-Logo.png" alt="Fiverr"></a>
-        <a href="https://www.upwork.com/freelancers/~019863175ee75bae5a" target="_blank"><img src="https://raw.githubusercontent.com/Freelankarx/Freelankarx/7bbdf810cf8c115173744faeb1d7a6a8d3aadc71/upwork.png" alt="Upwork"></a>
-        <a href="https://www.linkedin.com/in/muraina-olamilekan-a09543298/" target="_blank"><img src="https://raw.githubusercontent.com/Freelankarx/Freelankarx/7bbdf810cf8c115173744faeb1d7a6a8d3aadc71/linkedin.png" alt="LinkedIn"></a>
-        <a href="https://www.instagram.com/freelankarxx?igsh=MXV5N3l5ZHp5eWpkMQ==" target="_blank"><img src="https://raw.githubusercontent.com/Freelankarx/Freelankarx/7bbdf810cf8c115173744faeb1d7a6a8d3aadc71/instagram.png" alt="Instagram"></a>
-        <a href="https://www.facebook.com/freelankarx0" target="_blank"><img src="https://raw.githubusercontent.com/Freelankarx/Freelankarx/7bbdf810cf8c115173744faeb1d7a6a8d3aadc71/facebook-icon-lg.png" alt="Facebook"></a>
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-black/5">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
+      <div>
+        <h3 class="font-semibold">LearnWithSolly</h3>
+        <p class="text-gray-600 mt-2 text-sm">Shopify Expert & Digital Marketing Strategist.</p>
       </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 LearnWithSolly | Designed by Adeagbo Adesola</p>
-  </footer>
-
-  <!-- Extra JS for nav + scroll animations -->
-  <script>
-    // Mobile nav toggle
-    const toggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector("nav ul");
-    toggle.addEventListener("click", () => navLinks.classList.toggle("active"));
-
-    // Fade-in sections
-    const sections = document.querySelectorAll(".section");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add("visible");
-      });
-    }, { threshold: 0.2 });
-    sections.forEach(section => observer.observe(section));
-  </script>
-</body>
-</html>
+      <div>
+        <h4 class="font-semibold">Quick Links</h4>
+        <ul class="mt-2 text-sm space-y-1">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#pricing">Pricing</a
