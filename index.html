@@ -134,6 +134,242 @@
     </div>
   </section>
 
+  <section id="twv-testimonials" aria-label="Client video testimonials" style="--accent:#00c4a7; --accent2:#0077ff; padding:48px 16px; max-width:1200px; margin:0 auto;">
+  <h2 style="text-align:center; font-family:Inter,system-ui,Arial, sans-serif; font-size:1.9rem; margin-bottom:8px;">Client Video Testimonials</h2>
+  <p style="text-align:center; color:#475569; margin-bottom:22px; max-width:760px; margin-left:auto; margin-right:auto;">
+    Scroll to preview — tap any video to open with sound. (Previews autoplay muted on desktop.)
+  </p>
+
+  <!-- GRID -->
+  <div class="twv-grid" style="display:grid; gap:18px; grid-template-columns:repeat(3,1fr);">
+    <!-- CARD 1 -->
+    <article class="twv-card" data-index="1" style="position:relative; cursor:pointer; border-radius:12px; overflow:hidden; box-shadow:0 12px 30px rgba(2,6,23,.08);">
+      <!-- Replace the src & poster values below with your actual links -->
+      <video class="twv-preview"
+             src="https://raw.githubusercontent.com/Learnwithsolly/Learnwithsolly/fd9a5b505a5fe58b860cddcd607b61a4b7d124e3/%23ShopifyWebDesign%23EcommerceWebsiteDesign%23ShopifyExpert%23WebsiteDesignShopify%23ShopifyDesignService.mp4"
+             poster="PUT_POSTER_URL_HERE_1.jpg"
+             playsinline muted loop preload="metadata"
+             style="width:100%; height:240px; object-fit:cover; display:block;">
+        <!-- fallback -->
+      </video>
+      <button class="twv-open-btn" aria-label="Open testimonial 1" style="position:absolute; inset:0; display:grid; place-items:center; background:linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.12)); border:0; color:white; font-size:0; transition:transform .18s;">
+        <!-- Play icon -->
+        <svg width="74" height="74" viewBox="0 0 24 24" fill="none" style="filter:drop-shadow(0 6px 18px rgba(2,6,23,.25));">
+          <circle cx="12" cy="12" r="11" fill="rgba(0,0,0,.45)"/>
+          <path d="M10 8l6 4-6 4V8z" fill="white"/>
+        </svg>
+      </button>
+      <div style="padding:12px 14px; background:white;">
+        <strong style="display:block; font-size:1rem;">Client Name 1</strong>
+        <span style="display:block; color:#475569; font-size:.9rem; margin-top:6px;">Short line describing result (e.g. "3x month-over-month sales").</span>
+      </div>
+    </article>
+
+    <!-- CARD 2 -->
+    <article class="twv-card" data-index="2" style="position:relative; cursor:pointer; border-radius:12px; overflow:hidden; box-shadow:0 12px 30px rgba(2,6,23,.08);">
+      <video class="twv-preview"
+             src="https://raw.githubusercontent.com/Learnwithsolly/Learnwithsolly/fd9a5b505a5fe58b860cddcd607b61a4b7d124e3/Another%20one.%20This%20could%20be%20you%20too.Dm%20to%20get%20started.-%20%23dropshipping101-%20%23dropshipbasics-%20%23drops.mp4"
+             poster="PUT_POSTER_URL_HERE_2.jpg"
+             playsinline muted loop preload="metadata"
+             style="width:100%; height:240px; object-fit:cover; display:block;">
+      </video>
+      <button class="twv-open-btn" aria-label="Open testimonial 2" style="position:absolute; inset:0; display:grid; place-items:center; background:linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.12)); border:0; color:white; font-size:0; transition:transform .18s;">
+        <svg width="74" height="74" viewBox="0 0 24 24" fill="none" style="filter:drop-shadow(0 6px 18px rgba(2,6,23,.25));">
+          <circle cx="12" cy="12" r="11" fill="rgba(0,0,0,.45)"/>
+          <path d="M10 8l6 4-6 4V8z" fill="white"/>
+        </svg>
+      </button>
+      <div style="padding:12px 14px; background:white;">
+        <strong style="display:block; font-size:1rem;">Client Name 2</strong>
+        <span style="display:block; color:#475569; font-size:.9rem; margin-top:6px;">Short line describing result (e.g. "Doubling ad ROAS").</span>
+      </div>
+    </article>
+
+    <!-- CARD 3 -->
+    <article class="twv-card" data-index="3" style="position:relative; cursor:pointer; border-radius:12px; overflow:hidden; box-shadow:0 12px 30px rgba(2,6,23,.08);">
+      <video class="twv-preview"
+             src="https://raw.githubusercontent.com/Learnwithsolly/Learnwithsolly/blob/fd9a5b505a5fe58b860cddcd607b61a4b7d124e3/Learnwithsolly%20Boom!%20DENISE%20gave%20her%20Testimony..mp4"
+             poster="PUT_POSTER_URL_HERE_3.jpg"
+             playsinline muted loop preload="metadata"
+             style="width:100%; height:240px; object-fit:cover; display:block;">
+      </video>
+      <button class="twv-open-btn" aria-label="Open testimonial 3" style="position:absolute; inset:0; display:grid; place-items:center; background:linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.12)); border:0; color:white; font-size:0; transition:transform .18s;">
+        <svg width="74" height="74" viewBox="0 0 24 24" fill="none" style="filter:drop-shadow(0 6px 18px rgba(2,6,23,.25));">
+          <circle cx="12" cy="12" r="11" fill="rgba(0,0,0,.45)"/>
+          <path d="M10 8l6 4-6 4V8z" fill="white"/>
+        </svg>
+      </button>
+      <div style="padding:12px 14px; background:white;">
+        <strong style="display:block; font-size:1rem;">Client Name 3</strong>
+        <span style="display:block; color:#475569; font-size:.9rem; margin-top:6px;">Short line describing result (e.g. "Email flow increased LTV").</span>
+      </div>
+    </article>
+  </div>
+
+  <!-- MODAL (hidden by default) -->
+  <div id="twv-modal" aria-hidden="true" style="display:none; position:fixed; inset:0; z-index:1200; align-items:center; justify-content:center; background:rgba(2,6,23,.72); padding:24px;">
+    <div id="twv-modal-inner" role="dialog" aria-modal="true" style="width:100%; max-width:1100px; max-height:90vh; border-radius:12px; overflow:hidden; background:#000; position:relative;">
+      <button id="twv-close" aria-label="Close video" style="position:absolute; right:12px; top:12px; z-index:5; background:rgba(255,255,255,0.08); border:0; color:white; padding:8px 10px; border-radius:8px; font-size:1rem;">✕</button>
+      <video id="twv-modal-video" controls playsinline style="width:100%; height:100%; display:block; background:#000; object-fit:contain;"></video>
+    </div>
+  </div>
+</section>
+
+<!-- SCRIPT: behavior (replace in-place; this is the only script needed) -->
+<script>
+  (function () {
+    // Elements
+    const cards = Array.from(document.querySelectorAll('#twv-testimonials .twv-card'));
+    const previews = Array.from(document.querySelectorAll('#twv-testimonials .twv-preview'));
+    const openButtons = Array.from(document.querySelectorAll('#twv-testimonials .twv-open-btn'));
+    const modal = document.getElementById('twv-modal');
+    const modalInner = document.getElementById('twv-modal-inner');
+    const modalVideo = document.getElementById('twv-modal-video');
+    const closeBtn = document.getElementById('twv-close');
+    let modalOpen = false;
+
+    // Responsive: autoplay previews only on desktop width (>= 768px)
+    const isDesktop = () => window.innerWidth >= 768;
+
+    // IntersectionObserver: autoplay muted previews when visible (desktop)
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const video = entry.target.querySelector('.twv-preview');
+        if (!video) return;
+        if (entry.isIntersecting && isDesktop() && !modalOpen) {
+          // play muted preview
+          video.muted = true;
+          const p = video.play();
+          if (p && p.catch) p.catch(() => {/* autoplay might fail on some browsers; ignore */});
+        } else {
+          // pause preview when not visible or if modal open
+          try { video.pause(); video.currentTime = 0; } catch(e) {}
+        }
+      });
+    }, { threshold: 0.55 });
+
+    cards.forEach(card => io.observe(card));
+
+    // Helper: open modal for a given card
+    function openModalForCard(card) {
+      const vid = card.querySelector('.twv-preview');
+      if (!vid) return;
+      const src = vid.currentSrc || vid.getAttribute('src');
+      const poster = vid.getAttribute('poster') || '';
+
+      // Pause all previews
+      previews.forEach(v => { try { v.pause(); } catch(e) {} });
+
+      // Setup modal
+      modalVideo.src = src || '';
+      modalVideo.poster = poster;
+      modalVideo.muted = false;
+      modalVideo.controls = true;
+
+      // Show modal
+      modal.style.display = 'flex';
+      modal.setAttribute('aria-hidden', 'false');
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+      modalOpen = true;
+
+      // Try to play unmuted (user click opened modal so should be allowed)
+      const p = modalVideo.play();
+      if (p && p.catch) {
+        p.catch((err) => {
+          // if autoplay blocked with sound, fallback to muted and show controls (user can unmute)
+          console.warn('play() failed — falling back to muted autoplay', err);
+          modalVideo.muted = true;
+          modalVideo.play().catch(()=>{});
+        });
+      }
+    }
+
+    // Close modal
+    function closeModal() {
+      modalOpen = false;
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+      try { modalVideo.pause(); } catch(e) {}
+      modalVideo.src = '';
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+      // Resume any preview in view (desktop only)
+      setTimeout(() => {
+        cards.forEach(card => {
+          const rect = card.getBoundingClientRect();
+          const inView = rect.top < window.innerHeight && rect.bottom > 0;
+          if (inView && isDesktop()) {
+            const v = card.querySelector('.twv-preview');
+            if (v) {
+              v.muted = true;
+              v.play().catch(()=>{});
+            }
+          }
+        });
+      }, 120);
+    }
+
+    // Click handlers: open modal when clicking the overlay button or card
+    openButtons.forEach((btn, idx) => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openModalForCard(cards[idx]);
+      });
+    });
+    // Also open when clicking anywhere on the card (but not on native controls)
+    cards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        // if clicked a child that is a video control, ignore
+        if (e.target && (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.tagName === 'INPUT')) return;
+        openModalForCard(card);
+      });
+    });
+
+    // Close modal by clicking outside inner or pressing ESC
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    closeBtn.addEventListener('click', closeModal);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modalOpen) closeModal();
+    });
+
+    // Handle resize: pause previews during mobile <-> desktop changes
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        // if leaving desktop, pause all previews
+        if (!isDesktop()) {
+          previews.forEach(v => { try { v.pause(); } catch(e) {} });
+        } else {
+          // resume any preview in view
+          cards.forEach(card => {
+            const rect = card.getBoundingClientRect();
+            const inView = rect.top < window.innerHeight && rect.bottom > 0;
+            const v = card.querySelector('.twv-preview');
+            if (v && inView && !modalOpen) {
+              v.muted = true;
+              v.play().catch(()=>{});
+            }
+          });
+        }
+      }, 140);
+    });
+
+    // Accessibility: prevent tab-focus trap by focusing close button when modal opens
+    // (optional enhancement)
+    const obsModal = new MutationObserver(() => {
+      if (modal.style.display !== 'none') {
+        try { closeBtn.focus(); } catch(e) {}
+      }
+    });
+    obsModal.observe(modal, { attributes: true, attributeFilter: ['style'] });
+  })();
+</script>
+
+
   <!-- TESTIMONIALS -->
   <section id="testimonials" class="max-w-7xl mx-auto px-6 py-20">
     <h2 class="text-3xl md:text-4xl text-center">Client Testimonials</h2>
